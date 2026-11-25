@@ -1,5 +1,3 @@
-import logoImg from "@/assets/logo.png";
-
 export function Footer() {
   return (
     <footer className="relative w-full overflow-hidden bg-[#17141D] text-white">

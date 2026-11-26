@@ -1,75 +1,34 @@
-# React + TypeScript + Vite
+# Sonora
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing page do headphone **Sonora** com animações sincronizadas ao scroll usando GSAP (`ScrollTrigger` e `matchMedia`), navegação por etapas/snap no desktop, trajetória adaptada para mobile e encaixe (dock) do fone no card da seção de modelos.
 
-Currently, two official plugins are available:
+## Tecnologias
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React** + **TypeScript**
+- **GSAP** (`ScrollTrigger`, `matchMedia`, `gsap.context`)
+- **Motion** (animações interativas na seção de cenários/hélice)
+- **Tailwind CSS**
 
-## React Compiler
+## Estrutura Principal
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- `src/App.tsx`: Orquestra o estado de encaixe do fone (`isHeadphoneDocked`), refs das seções e inicialização das animações.
+- `src/Gsap.config.ts`: Define a entrada do Hero, revelação de seções, trajetórias responsivas (desktop e mobile) e controle de snap/dock.
+- `src/components/SectionHero.tsx`: Cabeçalho e tipografia principal.
+- `src/components/SectionInfo.tsx`: Apresentação e destaques do produto.
+- `src/components/SectionHelix.tsx`: Seletor interativo em hélice para diferentes cenários de uso.
+- `src/components/SectionVideo.tsx`: Seção em vídeo.
+- `src/components/SectionModels.tsx`: Comparativo/slider dos modelos (**Obsidian Black** e **Pure White**) com área de encaixe do fone.
+- `src/components/FloatingHeadphone.tsx`: Fone flutuante acompanhando o scroll antes do encaixe.
+- `src/components/Footer.tsx`: Rodapé da página.
 
-## Expanding the ESLint configuration
+## Como rodar o projeto
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+```bash
+# Instalar dependências
+npm install
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# Iniciar o servidor de desenvolvimento
+npm run dev
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+# Gerar build de produção
+npm run build

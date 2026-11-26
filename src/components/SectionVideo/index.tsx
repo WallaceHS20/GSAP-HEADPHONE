@@ -76,7 +76,7 @@ export function SectionVideo({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.9, delay: 0.1 }}
-            className="break-words font-display font-black uppercase text-4xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[0.94] lg:leading-[0.88] tracking-tight"
+            className="break-words font-display font-black uppercase text-4xl sm:text-6xl lg:text-7xl xl:text-7xl leading-[0.94] lg:leading-[0.88] tracking-tight"
           >
             SOM QUE
             <br />

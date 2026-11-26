@@ -17,7 +17,7 @@ export function SectionVideo({
   return (
     <section
       ref={sectionRef}
-      className="relative h-screen max-h-screen min-h-0 w-full flex items-center overflow-hidden bg-[#08060d] text-white"
+      className="relative min-h-[100svh] lg:h-screen lg:max-h-screen min-h-0 w-full flex items-center overflow-hidden bg-[#08060d] text-white"
     >
       {/* Background video */}
       <video
@@ -41,7 +41,7 @@ export function SectionVideo({
       <div className="absolute right-0 bottom-0 w-[500px] h-[500px] rounded-full bg-fuchsia-600/10 blur-[160px] pointer-events-none" />
 
       {/* Conteúdo */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-16 py-8 md:py-10 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-6 md:px-16 py-8 md:py-10 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
         {/* Área reservada para o fone */}
         <div
           ref={headphoneSlotRef}
@@ -54,18 +54,18 @@ export function SectionVideo({
         </div>
 
         {/* Texto */}
-        <div className="lg:col-span-7 max-w-3xl">
+        <div className="min-w-0 lg:col-span-7 max-w-3xl">
           {/* Categoria */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="flex items-center gap-3 mb-8"
+            className="flex items-center gap-3 mb-5 lg:mb-8"
           >
-            <span className="w-8 h-[1px] bg-purple-400" />
+            <span className="w-8 h-[1px] bg-purple-400 shrink-0" />
 
-            <span className="text-xs font-bold uppercase tracking-[0.35em] text-purple-300">
+            <span className="text-[11px] sm:text-xs font-bold uppercase tracking-[0.25em] sm:tracking-[0.35em] text-purple-300">
               Imersão contínua
             </span>
           </motion.div>
@@ -76,7 +76,7 @@ export function SectionVideo({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.9, delay: 0.1 }}
-            className="font-display font-black uppercase text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[0.88] tracking-tight"
+            className="break-words font-display font-black uppercase text-4xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[0.94] lg:leading-[0.88] tracking-tight"
           >
             SOM QUE
             <br />
@@ -93,7 +93,7 @@ export function SectionVideo({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.25 }}
-            className="mt-8 max-w-lg text-sm sm:text-base text-zinc-300 leading-relaxed"
+            className="mt-5 lg:mt-8 max-w-lg text-sm sm:text-base text-zinc-300 leading-relaxed"
           >
             Feche os olhos para o mundo exterior. Descubra uma experiência
             sonora envolvente, com presença, profundidade e intensidade em cada
@@ -106,22 +106,22 @@ export function SectionVideo({
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="mt-12 flex items-center gap-5"
+            className="mt-8 lg:mt-12 flex flex-wrap items-center gap-3 sm:gap-5"
           >
             <div className="flex items-center gap-2">
-              <span className="relative flex h-2 w-2">
+              <span className="relative flex h-2 w-2 shrink-0">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-purple-400 opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-purple-400" />
               </span>
 
-              <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-zinc-400">
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em] sm:tracking-[0.25em] text-zinc-400">
                 Sound Experience
               </span>
             </div>
 
-            <span className="w-12 h-px bg-white/20" />
+            <span className="hidden sm:inline-block w-12 h-px bg-white/20" />
 
-            <span className="text-[10px] uppercase tracking-[0.25em] text-zinc-500">
+            <span className="text-[10px] uppercase tracking-[0.2em] sm:tracking-[0.25em] text-zinc-500">
               Designed for immersion
             </span>
           </motion.div>

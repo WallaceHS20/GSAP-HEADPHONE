@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import logoImg from './assets/logo.png';
 import headphoneImg from './assets/9662743.png';

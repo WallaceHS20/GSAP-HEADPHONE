@@ -5,6 +5,7 @@ import tailwindcss from "@tailwindcss/vite"
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  base: "/GSAP-HEADPHONE/",
   server: {
     host: true, // ou coloque o IP específico, ex: '0.0.0.0'
     port: 5173,

@@ -1,13 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --color-primary: #7c3aed;
-  --color-primary-hover: #6d28d9;
-  --color-purple-glow: #a855f7; /* Roxo brilhante para fundos escuros */
-  --color-bg: #f4f4f6;
-  --color-surface: #ffffff;
-  --color-dark: #09090b;
-  --color-muted: #71717a;
+  --color-primary: #7c3aed;       /* Roxo vibrante (Violet 600) */
+  --color-primary-hover: #6d28d9; /* Roxo mais escuro para hover */
+  --color-bg: #f4f4f6;            /* Cinza gelo bem claro (fundo) */
+  --color-surface: #ffffff;       /* Branco puro */
+  --color-dark: #09090b;          /* Preto profundo */
+  --color-muted: #71717a;         /* Cinza neutro */
 }
 
 /* Se estiver usando Tailwind v4, este bloco libera bg-primary, text-primary, etc. */
